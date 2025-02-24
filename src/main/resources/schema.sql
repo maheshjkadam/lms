@@ -1,0 +1,18 @@
+--Create Book Table
+CREATE TABLE books (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    isbn VARCHAR(20) UNIQUE NOT NULL,
+    status VARCHAR(20) CHECK (status IN ('AVAILABLE', 'BORROWED')),
+    added_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+--create User Table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    role VARCHAR(20) CHECK (role in ('ADMIN','MEMBER')),
+    join_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

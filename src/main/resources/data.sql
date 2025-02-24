@@ -1,0 +1,2 @@
+INSERT INTO books (title, author, isbn, status) VALUES ('The Great Gatsby', 'F. Scott Fitzgerald', '9780743273565', 'AVAILABLE')
+INSERT INTO users (name, email, role) VALUES ('Alice', 'alice@example.com', 'MEMBER')
