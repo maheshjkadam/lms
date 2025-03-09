@@ -1,2 +1,7 @@
 # logs
 logs/
+
+.gradle/
+gradle/
+gradlew
+gradlew.bat
