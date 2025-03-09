@@ -1,10 +1,16 @@
 package com.library;
 
-public class LibraryManagementApp {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
 
-//  whenever we load .class file, jvm look for main method with this signature to run
+public class LibraryManagementApp {
+  private static final Logger logger = LoggerFactory.getLogger(LibraryManagementApp.class);
+
+  //  whenever we load .class file, jvm look for main method with this signature to run
 //  (Note : load and runs main method IT NOT INITIALIZE the object)
-  public static void main(String[] arg) {
-    System.out.println("Not Implemented Yet");
+  public static void main(String[] args){
+    SpringApplication.run(LibraryManagementApp.class,args);
+    logger.info("Library Management System started sucessfully!");
   }
 }
